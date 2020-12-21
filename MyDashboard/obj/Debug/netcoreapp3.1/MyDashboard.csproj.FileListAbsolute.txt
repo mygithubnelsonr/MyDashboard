@@ -22,4 +22,3 @@ A:\Source\Repos\90_Work\WPF\MyDashboard\MyDashboard\obj\Debug\netcoreapp3.1\MyDa
 A:\Source\Repos\90_Work\WPF\MyDashboard\MyDashboard\bin\Debug\netcoreapp3.1\Files\DbRecordEditor.appref-ms
 A:\Source\Repos\90_Work\WPF\MyDashboard\MyDashboard\bin\Debug\netcoreapp3.1\Files\MyJukeboxDbTools.appref-ms
 A:\Source\Repos\90_Work\WPF\MyDashboard\MyDashboard\bin\Debug\netcoreapp3.1\Files\MyMp3Importer.appref-ms
-A:\Source\Repos\90_Work\WPF\MyDashboard\MyDashboard\obj\Debug\netcoreapp3.1\MyDashboard.csprojAssemblyReference.cache

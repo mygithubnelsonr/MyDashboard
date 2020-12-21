@@ -4,6 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Dashboard3.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,9 +12,11 @@
     <None Remove="Files\MyJukebox.appref-ms" />
     <None Remove="Files\MyJukeboxDbTools.appref-ms" />
     <None Remove="Files\MyMp3Importer.appref-ms" />
-    <None Remove="Images\Edit2.png" />
-    <None Remove="Images\Import2.png" />
-    <None Remove="Images\Jukebox4.png" />
+    <None Remove="Images\Dashboard.png" />
+    <None Remove="Images\Dashboard3.ico" />
+    <None Remove="Images\Edit.png" />
+    <None Remove="Images\Import.png" />
+    <None Remove="Images\Jukebox.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,31 +32,18 @@
     <Content Include="Files\MyMp3Importer.appref-ms">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Images\Dashboard3.ico" />
+    <Resource Include="Images\Dashboard.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\Edit2.png">
+    <Resource Include="Images\Edit.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Import2.png">
+    <Resource Include="Images\Import.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Jukebox4.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Images\Edit.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Import.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Jukebox.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Jukebox3.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
+    <Resource Include="Images\Jukebox.png" />
   </ItemGroup>
 
 </Project>
