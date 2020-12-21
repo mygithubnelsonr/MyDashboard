@@ -1,0 +1,120 @@
+﻿<Window x:Class="MyDashboard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyDashboard"
+        mc:Ignorable="d"
+        Title="Media Dashboard" Height="200" Width="400" WindowStartupLocation="CenterScreen" 
+            Foreground="AntiqueWhite" WindowStyle="None" MouseLeftButtonDown="Window_Move"
+            Background="{StaticResource WindowBackground}">
+
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="exitButton" >
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderBrush" Value="#FF7474E8"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Foreground" Value="AliceBlue"/>
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="Height" Value="30"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="#FF7474E8" BorderThickness="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="BorderBrush" Value="Blue"/>
+                    <Setter Property="Background" Value="Red"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="bigButton" TargetType="Button">
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Background" Value="#122C5F" />
+            <Setter Property="BorderBrush" Value="AntiqueWhite" />
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="AntiqueWhite"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="AntiqueWhite" BorderThickness="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="BorderBrush" Value="Blue"/>
+                    <Setter Property="Background" Value="#FF266BCF"/>
+                </Trigger>
+                <Trigger Property="IsFocused" Value="true">
+                    <Setter Property="BorderBrush" Value="#E01919"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Text="Media Dashboard" >
+            <TextBlock.Style>
+                <Style>
+                    <Setter Property="TextBlock.FontSize" Value="28" />
+                    <Setter Property="TextBlock.FontWeight" Value="Bold"/>
+                    <Setter Property="TextBlock.HorizontalAlignment" Value="Center"/>
+                    <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <Button Grid.Column="2" x:Name="buttonExit" Content="X" Margin="4" Style="{StaticResource exitButton}"
+                HorizontalAlignment="Right"
+                Click="buttonExit_Click"/>
+
+        <Button x:Name="button1" Grid.Row="2" Grid.Column="0" Style="{StaticResource bigButton}" Click="button1_Click">
+            <StackPanel>
+                <Image Source="/Images/Jukebox4.png"  Width="60" Height="60"/>
+                <TextBlock Text="Jukebox" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="button2" Grid.Row="2" Grid.Column="1" Style="{StaticResource bigButton}" Click="button2_Click">
+            <StackPanel>
+                <Image Source="/Images/Import2.png"  Width="60" Height="60"/>
+                <TextBlock Text="Importer" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="button3" Grid.Row="2" Grid.Column="2" Style="{StaticResource bigButton}" Click="button3_Click">
+            <StackPanel>
+                <Image Source="/Images/Edit2.png"  Width="60" Height="60"/>
+                <TextBlock Text="Editor" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+
+
+    </Grid>
+</Window>

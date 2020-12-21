@@ -1,0 +1,12 @@
+﻿<Application x:Class="MyDashboard.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MyDashboard"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <LinearGradientBrush x:Key="WindowBackground" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Offset="0" Color="#FF4C87D8"/>
+            <GradientStop Offset="1" Color="#FF092853"/>
+        </LinearGradientBrush>
+    </Application.Resources>
+</Application>

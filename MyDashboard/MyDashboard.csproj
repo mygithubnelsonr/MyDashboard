@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Files\DbRecordEditor.appref-ms" />
+    <None Remove="Files\MyJukebox.appref-ms" />
+    <None Remove="Files\MyJukeboxDbTools.appref-ms" />
+    <None Remove="Files\MyMp3Importer.appref-ms" />
+    <None Remove="Images\Edit2.png" />
+    <None Remove="Images\Import2.png" />
+    <None Remove="Images\Jukebox4.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Files\DbRecordEditor.appref-ms">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\MyJukebox.appref-ms">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\MyJukeboxDbTools.appref-ms">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\MyMp3Importer.appref-ms">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Edit2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Import2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Jukebox4.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\Edit.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\Import.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\Jukebox.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\Jukebox3.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
