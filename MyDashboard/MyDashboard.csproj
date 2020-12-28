@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>Dashboard3.ico</ApplicationIcon>
+    <ApplicationIcon>Dashboard48.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +14,7 @@
     <None Remove="Files\MyMp3Importer.appref-ms" />
     <None Remove="Images\Dashboard.png" />
     <None Remove="Images\Dashboard3.ico" />
+    <None Remove="Images\Dashboard48.ico" />
     <None Remove="Images\Edit.png" />
     <None Remove="Images\Import.png" />
     <None Remove="Images\Jukebox.png" />
@@ -34,6 +35,7 @@
     </Content>
     <Resource Include="Images\Dashboard3.ico" />
     <Resource Include="Images\Dashboard.png" />
+    <Resource Include="Images\Dashboard48.ico" />
   </ItemGroup>
 
   <ItemGroup>

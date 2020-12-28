@@ -10,7 +10,7 @@
             Background="{StaticResource WindowBackground}">
 
     <Window.Resources>
-        <Style TargetType="Button" x:Key="exitButton" >
+        <Style x:Key="exitButton" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="FontSize" Value="18"/>
             <Setter Property="FontWeight" Value="Bold"/>
@@ -88,7 +88,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <Image Grid.Column="0" Source="/Images/Dashboard.png" Width="38" Height="42" Margin="8 4 0 0" />
+            <Image Grid.Column="0" Source="/Images/Dashboard48.ico" Width="28" Height="32" Margin="8 4 6 1" />
             <TextBlock Grid.Column="1" Text="Media Dashboard" >
                 <TextBlock.Style>
                     <Style>
@@ -99,9 +99,17 @@
                     </Style>
                 </TextBlock.Style>
             </TextBlock>
-            <Button Grid.Column="3" x:Name="buttonExit" Content="X" Margin="4" Style="{StaticResource exitButton}"
+            <StackPanel Grid.Column="3" Orientation="Horizontal">
+                <Button Grid.Column="3" x:Name="buttonMinimize" Style="{StaticResource exitButton}"
+                    HorizontalAlignment="Left" Click="buttonMinimize_Click">
+                    <Button.Content>
+                        <Rectangle Width="18" Height="5" Fill="White"/>
+                    </Button.Content>
+                </Button>
+                <Button x:Name="buttonExit" Content="X" Margin="4" Style="{StaticResource exitButton}"
                     HorizontalAlignment="Right"
                     Click="buttonExit_Click"/>
+            </StackPanel>
         </Grid>
         <Button x:Name="button1" Grid.Row="2" Grid.Column="0" Style="{StaticResource bigButton}" Click="button1_Click">
             <StackPanel>

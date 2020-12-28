@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xdm1hjJmRRBn943lRkHrZ4i0dQJyvegnnn3PClT+vo8l+hnhNx5kVZx4wfGTrnQR31gBFWRfvcCplTOV5K4mAA==",
+  "dgSpecHash": "G1w8Y6h8Lh/yTBeD7G1TDgHX5pillPipSMdL4eUOcMId5LqVGn3awTxvnooBJPQVTfDekCi0iyIoycqdAkEnKw==",
   "success": true,
-  "projectFilePath": "A:\\Source\\Repos\\90_Work\\WPF\\MyDashboard\\MyDashboard\\MyDashboard.csproj",
+  "projectFilePath": "A:\\Source\\Repos\\90_Work\\WPF\\MyTools\\MyDashboard\\MyDashboard\\MyDashboard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nelsonr\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],

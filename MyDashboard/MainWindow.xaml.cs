@@ -31,7 +31,7 @@ namespace MyDashboard
             string action = @"files\MyJukebox.appref-ms";
             CreateBat(action);
             RunBat();
-            //DeleteBat();
+            this.WindowState = WindowState.Minimized;
         }
 
 
@@ -40,6 +40,7 @@ namespace MyDashboard
             string action = @"files\MyMp3Importer.appref-ms";
             CreateBat(action);
             RunBat();
+            this.WindowState = WindowState.Minimized;
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
@@ -47,6 +48,7 @@ namespace MyDashboard
             string action = @"files\DbRecordEditor.appref-ms";
             CreateBat(action);
             RunBat();
+            this.WindowState = WindowState.Minimized;
         }
 
         private void CreateBat(string content)
@@ -74,6 +76,11 @@ namespace MyDashboard
         {
             if (File.Exists("start.bat"))
                 File.Delete("start.bat");
+        }
+
+        private void buttonMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
     }
 }

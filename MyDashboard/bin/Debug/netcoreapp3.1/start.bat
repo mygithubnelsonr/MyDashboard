@@ -1,1 +1,1 @@
-start "Start" files\DbRecordEditor.appref-ms
+start "Start" files\MyMp3Importer.appref-ms

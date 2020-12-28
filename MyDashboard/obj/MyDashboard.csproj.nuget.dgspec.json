@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "A:\\Source\\Repos\\90_Work\\WPF\\MyDashboard\\MyDashboard\\MyDashboard.csproj": {}
+    "A:\\Source\\Repos\\90_Work\\WPF\\MyTools\\MyDashboard\\MyDashboard\\MyDashboard.csproj": {}
   },
   "projects": {
-    "A:\\Source\\Repos\\90_Work\\WPF\\MyDashboard\\MyDashboard\\MyDashboard.csproj": {
+    "A:\\Source\\Repos\\90_Work\\WPF\\MyTools\\MyDashboard\\MyDashboard\\MyDashboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Source\\Repos\\90_Work\\WPF\\MyDashboard\\MyDashboard\\MyDashboard.csproj",
+        "projectUniqueName": "A:\\Source\\Repos\\90_Work\\WPF\\MyTools\\MyDashboard\\MyDashboard\\MyDashboard.csproj",
         "projectName": "MyDashboard",
-        "projectPath": "A:\\Source\\Repos\\90_Work\\WPF\\MyDashboard\\MyDashboard\\MyDashboard.csproj",
+        "projectPath": "A:\\Source\\Repos\\90_Work\\WPF\\MyTools\\MyDashboard\\MyDashboard\\MyDashboard.csproj",
         "packagesPath": "C:\\Users\\nelsonr\\.nuget\\packages\\",
-        "outputPath": "A:\\Source\\Repos\\90_Work\\WPF\\MyDashboard\\MyDashboard\\obj\\",
+        "outputPath": "A:\\Source\\Repos\\90_Work\\WPF\\MyTools\\MyDashboard\\MyDashboard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
