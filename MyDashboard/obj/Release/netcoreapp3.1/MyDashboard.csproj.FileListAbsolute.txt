@@ -23,10 +23,6 @@ A:\Source\Repos\90_Work\WPF\MyDashboard\MyDashboard\obj\Release\netcoreapp3.1\My
 A:\Source\Repos\90_Work\WPF\MyDashboard\MyDashboard\obj\Release\netcoreapp3.1\MyDashboard.dll
 A:\Source\Repos\90_Work\WPF\MyDashboard\MyDashboard\obj\Release\netcoreapp3.1\MyDashboard.pdb
 A:\Source\Repos\90_Work\WPF\MyDashboard\MyDashboard\obj\Release\netcoreapp3.1\MyDashboard.genruntimeconfig.cache
-A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\bin\Release\netcoreapp3.1\Files\DbRecordEditor.appref-ms
-A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\bin\Release\netcoreapp3.1\Files\MyJukebox.appref-ms
-A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\bin\Release\netcoreapp3.1\Files\MyJukeboxDbTools.appref-ms
-A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\bin\Release\netcoreapp3.1\Files\MyMp3Importer.appref-ms
 A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\bin\Release\netcoreapp3.1\MyDashboard.exe
 A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\bin\Release\netcoreapp3.1\MyDashboard.deps.json
 A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\bin\Release\netcoreapp3.1\MyDashboard.runtimeconfig.json
@@ -36,7 +32,6 @@ A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\bin\Release\netcorea
 A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\obj\Release\netcoreapp3.1\MyDashboard.csprojAssemblyReference.cache
 A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\obj\Release\netcoreapp3.1\MainWindow.g.cs
 A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\obj\Release\netcoreapp3.1\App.g.cs
-A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\obj\Release\netcoreapp3.1\MyDashboard_Content.g.cs
 A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\obj\Release\netcoreapp3.1\MyDashboard_MarkupCompile.cache
 A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\obj\Release\netcoreapp3.1\MyDashboard_MarkupCompile.lref
 A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\obj\Release\netcoreapp3.1\App.baml
@@ -48,3 +43,5 @@ A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\obj\Release\netcorea
 A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\obj\Release\netcoreapp3.1\MyDashboard.dll
 A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\obj\Release\netcoreapp3.1\MyDashboard.pdb
 A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\obj\Release\netcoreapp3.1\MyDashboard.genruntimeconfig.cache
+A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+A:\Source\Repos\90_Work\WPF\MyTools\MyDashboard\MyDashboard\obj\Release\netcoreapp3.1\MyDashboard.csproj.CopyComplete

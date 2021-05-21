@@ -8,44 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Files\DbRecordEditor.appref-ms" />
-    <None Remove="Files\MyJukebox.appref-ms" />
-    <None Remove="Files\MyJukeboxDbTools.appref-ms" />
-    <None Remove="Files\MyMp3Importer.appref-ms" />
-    <None Remove="Images\Dashboard.png" />
-    <None Remove="Images\Dashboard3.ico" />
-    <None Remove="Images\Dashboard48.ico" />
-    <None Remove="Images\Edit.png" />
-    <None Remove="Images\Import.png" />
-    <None Remove="Images\Jukebox.png" />
+    <Compile Remove="Images\**" />
+    <EmbeddedResource Remove="Images\**" />
+    <None Remove="Images\**" />
+    <Page Remove="Images\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Files\DbRecordEditor.appref-ms">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Files\MyJukebox.appref-ms">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Files\MyJukeboxDbTools.appref-ms">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Files\MyMp3Importer.appref-ms">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Resource Include="Images\Dashboard3.ico" />
-    <Resource Include="Images\Dashboard.png" />
-    <Resource Include="Images\Dashboard48.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Images\Edit.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Import.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Jukebox.png" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
 </Project>

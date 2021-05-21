@@ -1,8 +1,14 @@
-﻿using System.Diagnostics;
+﻿using Dashboard.Model;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media.Imaging;
 
 namespace MyDashboard
 {
@@ -11,9 +17,16 @@ namespace MyDashboard
     /// </summary>
     public partial class MainWindow : Window
     {
+        string _fileName = "actions.json";
+        List<Button> buttons = new List<Button>();
+        List<ButtonAction> actions = new List<ButtonAction>();
+
         public MainWindow()
         {
             InitializeComponent();
+            FillActionList();
+            FillButtonList();
+            AddButtonsToWrappanel();
         }
 
         private void Window_Move(object sender, MouseButtonEventArgs e)
@@ -26,61 +39,122 @@ namespace MyDashboard
             this.Close();
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void buttonMinimize_Click(object sender, RoutedEventArgs e)
         {
-            string action = @"files\MyJukebox.appref-ms";
-            CreateBat(action);
-            RunBat();
             this.WindowState = WindowState.Minimized;
         }
 
-
-        private void button2_Click(object sender, RoutedEventArgs e)
+        private void button_Click(object sender, RoutedEventArgs e)
         {
-            string action = @"files\MyMp3Importer.appref-ms";
-            CreateBat(action);
-            RunBat();
-            this.WindowState = WindowState.Minimized;
+            Button b = sender as Button;
+            int id = (int)b.Tag;
+            ButtonHandler(id);
         }
 
-        private void button3_Click(object sender, RoutedEventArgs e)
+        private void AddButtonsToWrappanel()
         {
-            string action = @"files\DbRecordEditor.appref-ms";
-            CreateBat(action);
-            RunBat();
+            foreach (var btn in buttons)
+            {
+                wrappanel.Children.Add(btn);
+            }
+        }
+
+        private void FillButtonList()
+        {
+            foreach (var action in actions)
+            {
+                Button button = GetButton(action);
+                buttons.Add(button);
+            }
+        }
+
+        private Button GetButton(ButtonAction action)
+        {
+            string appPath = AppDomain.CurrentDomain.BaseDirectory;
+            string image = appPath + "Images\\" + action.Image;
+
+            Button button = new Button();
+
+            StackPanel stackPanel = new StackPanel();
+
+            TextBlock textBlock = new TextBlock
+            {
+                Text = action.Caption,
+                HorizontalAlignment = HorizontalAlignment.Center
+            };
+
+            Image img = new Image // action.Caption;
+            {
+                Source = new BitmapImage(new Uri(image, UriKind.Absolute)),
+                Width = 60,
+                Height = 60
+            };
+
+            stackPanel.Children.Add(img);
+            stackPanel.Children.Add(textBlock);
+
+            button.Content = stackPanel;
+            button.Tag = action.ID;
+            button.Click += new RoutedEventHandler(button_Click);
+
+            return button;
+        }
+
+        private void FillActionList()
+        {
+            if (!File.Exists(_fileName))
+                return;
+
+            var jsonData = File.ReadAllText(_fileName);
+            actions = JsonConvert.DeserializeObject<List<ButtonAction>>(jsonData);
+
+            int rows = (actions.Count % 4) + 1;
+            this.Height = (rows * 120) + 80;
+        }
+
+        private void ButtonHandler(int id)
+        {
+            ButtonAction action = actions[id];
+            string path = action.Start;
+            string cmd = action.Command;
+            string file = "";
+            string command = action.Command;
+
+            if (String.IsNullOrEmpty(path))
+            {
+                CreateBat(command);
+                file = "start.bat";
+            }
+            else
+            {
+                file = command;
+            }
+
+            RunBat(file, path);
+
             this.WindowState = WindowState.Minimized;
         }
 
         private void CreateBat(string content)
         {
             string filename = "start.bat";
-
             StreamWriter writer = new StreamWriter(filename);
             writer.WriteLine("start " + "\"Start\"" + " " + content);
             writer.Close();
-
             Task.Delay(1000);
-
         }
 
-        private void RunBat()
+        private void RunBat(string fileName, string workingDirectory = "")
         {
-            Process p = new Process();
-            p.StartInfo.FileName = "start.bat";
-            p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            p.StartInfo.CreateNoWindow = true;
-            p.Start();
-        }
+            fileName = Path.Combine(workingDirectory, fileName);
 
-        private void DeleteBat()
-        {
-            if (File.Exists("start.bat"))
-                File.Delete("start.bat");
-        }
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.FileName = fileName;
+            startInfo.WorkingDirectory = workingDirectory;
+            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            startInfo.CreateNoWindow = true;
 
-        private void buttonMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            this.WindowState = WindowState.Minimized;
+            Process.Start(startInfo);
         }
     }
 }

@@ -5,10 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyDashboard"
         mc:Ignorable="d"
-        Title="Media Dashboard" Height="200" Width="400" WindowStartupLocation="CenterScreen" 
+        Title="Media Dashboard" Height="200" Width="520" WindowStartupLocation="CenterScreen" 
             Foreground="AntiqueWhite" WindowStyle="None" MouseLeftButtonDown="Window_Move"
             Background="{StaticResource WindowBackground}">
-
     <Window.Resources>
         <Style x:Key="exitButton" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
@@ -19,7 +18,6 @@
             <Setter Property="Foreground" Value="AliceBlue"/>
             <Setter Property="Width" Value="30"/>
             <Setter Property="Height" Value="30"/>
-
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -29,25 +27,24 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="FontWeight" Value="Bold"/>
-                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="Foreground" Value="White"/>
                     <Setter Property="BorderBrush" Value="Blue"/>
-                    <Setter Property="Background" Value="Red"/>
+                    <Setter Property="Background" Value="#FF0F244F"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
-        <Style x:Key="bigButton" TargetType="Button">
+        <Style TargetType="Button">
             <Setter Property="Height" Value="100"/>
             <Setter Property="Width" Value="100"/>
+            <Setter Property="Margin" Value="10"/>
             <Setter Property="Background" Value="#122C5F" />
             <Setter Property="BorderBrush" Value="AntiqueWhite" />
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="Foreground" Value="AntiqueWhite"/>
-
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -57,7 +54,6 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="FontWeight" Value="Bold"/>
@@ -71,65 +67,38 @@
             </Style.Triggers>
         </Style>
     </Window.Resources>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="48"/>
-            <RowDefinition Height="15"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid Grid.ColumnSpan="3">
+    <DockPanel>
+        <Grid DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="50"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Image Grid.Column="0" Source="/Images/Dashboard48.ico" Width="28" Height="32" Margin="8 4 6 1" />
-            <TextBlock Grid.Column="1" Text="Media Dashboard" >
-                <TextBlock.Style>
-                    <Style>
-                        <Setter Property="TextBlock.FontSize" Value="28" />
-                        <Setter Property="TextBlock.FontWeight" Value="Bold"/>
-                        <Setter Property="TextBlock.HorizontalAlignment" Value="Center"/>
-                        <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
-                    </Style>
-                </TextBlock.Style>
-            </TextBlock>
-            <StackPanel Grid.Column="3" Orientation="Horizontal">
-                <Button Grid.Column="3" x:Name="buttonMinimize" Style="{StaticResource exitButton}"
-                    HorizontalAlignment="Left" Click="buttonMinimize_Click">
-                    <Button.Content>
-                        <Rectangle Width="18" Height="5" Fill="White"/>
-                    </Button.Content>
-                </Button>
-                <Button x:Name="buttonExit" Content="X" Margin="4" Style="{StaticResource exitButton}"
-                    HorizontalAlignment="Right"
-                    Click="buttonExit_Click"/>
-            </StackPanel>
-        </Grid>
-        <Button x:Name="button1" Grid.Row="2" Grid.Column="0" Style="{StaticResource bigButton}" Click="button1_Click">
-            <StackPanel>
-                <Image Source="/Images/Jukebox.png"  Width="60" Height="60"/>
-                <TextBlock Text="Jukebox" HorizontalAlignment="Center"/>
-            </StackPanel>
-        </Button>
-        <Button x:Name="button2" Grid.Row="2" Grid.Column="1" Style="{StaticResource bigButton}" Click="button2_Click">
-            <StackPanel>
-                <Image Source="/Images/Import.png"  Width="60" Height="60"/>
-                <TextBlock Text="Importer" HorizontalAlignment="Center"/>
-            </StackPanel>
-        </Button>
-        <Button x:Name="button3" Grid.Row="2" Grid.Column="2" Style="{StaticResource bigButton}" Click="button3_Click">
-            <StackPanel>
-                <Image Source="/Images/Edit.png"  Width="60" Height="60"/>
-                <TextBlock Text="Editor" HorizontalAlignment="Center"/>
-            </StackPanel>
-        </Button>
-
-
-    </Grid>
+                <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="Dashboard48.ico" Width="28" Height="32" Margin="8 4 6 1" />
+                <TextBlock Grid.Column="1" Text="Media Dashboard" >
+                    <TextBlock.Style>
+                        <Style>
+                            <Setter Property="TextBlock.FontSize" Value="28" />
+                            <Setter Property="TextBlock.FontWeight" Value="Bold"/>
+                        <Setter Property="TextBlock.Foreground" Value="AntiqueWhite"/>
+                            <Setter Property="TextBlock.HorizontalAlignment" Value="Center"/>
+                            <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="buttonMinimize" Style="{StaticResource exitButton}"
+                        HorizontalAlignment="Left" Click="buttonMinimize_Click">
+                        <Button.Content>
+                            <Rectangle Width="18" Height="5" Fill="White"/>
+                        </Button.Content>
+                    </Button>
+                    <Button x:Name="buttonExit" Content="X" Margin="4" Style="{StaticResource exitButton}"
+                        HorizontalAlignment="Right"
+                        Click="buttonExit_Click"/>
+                </StackPanel>
+            </Grid>
+        <WrapPanel x:Name="wrappanel" Orientation="Horizontal" Margin="10">
+        </WrapPanel>
+    </DockPanel>
 </Window>

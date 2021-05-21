@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("files/dbrecordeditor.appref-ms")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("files/myjukebox.appref-ms")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("files/myjukeboxdbtools.appref-ms")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("files/mymp3importer.appref-ms")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("files/myrecordeditor.appref-ms")]
 
 

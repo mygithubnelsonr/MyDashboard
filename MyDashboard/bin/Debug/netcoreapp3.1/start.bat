@@ -1,1 +1,1 @@
-start "Start" files\MyMp3Importer.appref-ms
+start "Start" Files\MyMp3Importer.appref-ms

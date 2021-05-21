@@ -1,0 +1,6 @@
+\\win2k16dc01\SDPA\03 Application\Deploy\MyDashboard\MyDashboard.exe
+\\win2k16dc01\SDPA\03 Application\Deploy\MyDashboard\MyDashboard.dll
+\\win2k16dc01\SDPA\03 Application\Deploy\MyDashboard\MyDashboard.deps.json
+\\win2k16dc01\SDPA\03 Application\Deploy\MyDashboard\MyDashboard.runtimeconfig.json
+\\win2k16dc01\SDPA\03 Application\Deploy\MyDashboard\MyDashboard.pdb
+\\win2k16dc01\SDPA\03 Application\Deploy\MyDashboard\Newtonsoft.Json.dll

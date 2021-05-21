@@ -1,0 +1,30 @@
+[
+  {
+    "ID": 0,
+    "Caption": "Jukebox",
+    "Image": "Jukebox3.png",
+    "Start": "",
+    "Command": "Files\\MyJukebox.appref-ms"
+  },
+  {
+    "ID": 1,
+    "Caption": "Editor",
+    "Image": "Edit.png",
+    "Start": "",
+    "Command": "Files\\MyRecordEditor.appref-ms"
+  },
+  {
+    "ID": 2,
+    "Caption": "Importer",
+    "Image": "Import.png",
+    "Start": "",
+    "Command": "Files\\MyMp3Importer.appref-ms"
+  },
+  {
+    "ID": 3,
+    "Caption": "ToDo",
+    "Image": "ToDo6.png",
+    "Start": "C:\\Company\\Apps\\Utilities\\MyToDo\\",
+    "Command": "MyToDo.exe"
+  }
+]

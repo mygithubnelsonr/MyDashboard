@@ -1,23 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "A:\\Source\\Repos\\90_Work\\WPF\\MyTools\\MyDashboard\\MyDashboard\\MyDashboard.csproj": {}
+    "A:\\Source\\Repos\\90_Work\\03_WPF\\MyTools\\MyDashboard\\MyDashboard\\MyDashboard.csproj": {}
   },
   "projects": {
-    "A:\\Source\\Repos\\90_Work\\WPF\\MyTools\\MyDashboard\\MyDashboard\\MyDashboard.csproj": {
+    "A:\\Source\\Repos\\90_Work\\03_WPF\\MyTools\\MyDashboard\\MyDashboard\\MyDashboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Source\\Repos\\90_Work\\WPF\\MyTools\\MyDashboard\\MyDashboard\\MyDashboard.csproj",
+        "projectUniqueName": "A:\\Source\\Repos\\90_Work\\03_WPF\\MyTools\\MyDashboard\\MyDashboard\\MyDashboard.csproj",
         "projectName": "MyDashboard",
-        "projectPath": "A:\\Source\\Repos\\90_Work\\WPF\\MyTools\\MyDashboard\\MyDashboard\\MyDashboard.csproj",
+        "projectPath": "A:\\Source\\Repos\\90_Work\\03_WPF\\MyTools\\MyDashboard\\MyDashboard\\MyDashboard.csproj",
         "packagesPath": "C:\\Users\\nelsonr\\.nuget\\packages\\",
-        "outputPath": "A:\\Source\\Repos\\90_Work\\WPF\\MyTools\\MyDashboard\\MyDashboard\\obj\\",
+        "outputPath": "A:\\Source\\Repos\\90_Work\\03_WPF\\MyTools\\MyDashboard\\MyDashboard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\nelsonr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +31,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,6 +43,13 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -50,12 +60,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -64,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
