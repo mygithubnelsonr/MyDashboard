@@ -8,14 +8,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Images\**" />
-    <EmbeddedResource Remove="Images\**" />
-    <None Remove="Images\**" />
-    <Page Remove="Images\**" />
+    <None Remove="Images\Dashboard48.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Dashboard48.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Dashboard48.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

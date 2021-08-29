@@ -51,7 +51,6 @@ A:\Source\Repos\90_Work\03_WPF\MyTools\MyDashboard\MyDashboard\bin\Debug\netcore
 A:\Source\Repos\90_Work\03_WPF\MyTools\MyDashboard\MyDashboard\bin\Debug\netcoreapp3.1\MyDashboard.dll
 A:\Source\Repos\90_Work\03_WPF\MyTools\MyDashboard\MyDashboard\bin\Debug\netcoreapp3.1\MyDashboard.pdb
 A:\Source\Repos\90_Work\03_WPF\MyTools\MyDashboard\MyDashboard\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-A:\Source\Repos\90_Work\03_WPF\MyTools\MyDashboard\MyDashboard\obj\Debug\netcoreapp3.1\MyDashboard.csprojAssemblyReference.cache
 A:\Source\Repos\90_Work\03_WPF\MyTools\MyDashboard\MyDashboard\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 A:\Source\Repos\90_Work\03_WPF\MyTools\MyDashboard\MyDashboard\obj\Debug\netcoreapp3.1\App.g.cs
 A:\Source\Repos\90_Work\03_WPF\MyTools\MyDashboard\MyDashboard\obj\Debug\netcoreapp3.1\MyDashboard_MarkupCompile.cache
@@ -66,3 +65,5 @@ A:\Source\Repos\90_Work\03_WPF\MyTools\MyDashboard\MyDashboard\obj\Debug\netcore
 A:\Source\Repos\90_Work\03_WPF\MyTools\MyDashboard\MyDashboard\obj\Debug\netcoreapp3.1\MyDashboard.dll
 A:\Source\Repos\90_Work\03_WPF\MyTools\MyDashboard\MyDashboard\obj\Debug\netcoreapp3.1\MyDashboard.pdb
 A:\Source\Repos\90_Work\03_WPF\MyTools\MyDashboard\MyDashboard\obj\Debug\netcoreapp3.1\MyDashboard.genruntimeconfig.cache
+A:\Source\Repos\90_Work\03_WPF\MyTools\MyDashboard\MyDashboard\bin\Debug\netcoreapp3.1\Dashboard48.ico
+A:\Source\Repos\90_Work\03_WPF\MyTools\MyDashboard\MyDashboard\obj\Debug\netcoreapp3.1\MyDashboard.csprojAssemblyReference.cache

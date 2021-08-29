@@ -1,4 +1,4 @@
-﻿using Dashboard.Model;
+﻿using MyDashboard.Model;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -18,8 +18,11 @@ namespace MyDashboard
     public partial class MainWindow : Window
     {
         string _fileName = "actions.json";
-        List<Button> buttons = new List<Button>();
-        List<ButtonAction> actions = new List<ButtonAction>();
+        int _itemsperrow = 0;
+        int _actioncount = 0;
+
+        List<Button> _buttons = new List<Button>();
+        ActionModel.ActionCollection _actionCollection;
 
         public MainWindow()
         {
@@ -27,6 +30,11 @@ namespace MyDashboard
             FillActionList();
             FillButtonList();
             AddButtonsToWrappanel();
+        }
+
+        private void Window_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
         }
 
         private void Window_Move(object sender, MouseButtonEventArgs e)
@@ -53,7 +61,7 @@ namespace MyDashboard
 
         private void AddButtonsToWrappanel()
         {
-            foreach (var btn in buttons)
+            foreach (var btn in _buttons)
             {
                 wrappanel.Children.Add(btn);
             }
@@ -61,14 +69,14 @@ namespace MyDashboard
 
         private void FillButtonList()
         {
-            foreach (var action in actions)
+            foreach (var action in _actionCollection.Actions)
             {
                 Button button = GetButton(action);
-                buttons.Add(button);
+                _buttons.Add(button);
             }
         }
 
-        private Button GetButton(ButtonAction action)
+        private Button GetButton(ActionModel.Action action)
         {
             string appPath = AppDomain.CurrentDomain.BaseDirectory;
             string image = appPath + "Images\\" + action.Image;
@@ -105,16 +113,28 @@ namespace MyDashboard
             if (!File.Exists(_fileName))
                 return;
 
-            var jsonData = File.ReadAllText(_fileName);
-            actions = JsonConvert.DeserializeObject<List<ButtonAction>>(jsonData);
+            var RawJSON = File.ReadAllText(_fileName);
 
-            int rows = (actions.Count % 4) + 1;
-            this.Height = (rows * 120) + 80;
+            // get the rowperitem
+            ActionModel.Rootobject settings = JsonConvert.DeserializeObject<ActionModel.Rootobject>(RawJSON);
+            _itemsperrow = settings.RowItems;
+
+            // get action list
+            _actionCollection = JsonConvert.DeserializeObject<ActionModel.ActionCollection>(RawJSON);
+            _actioncount = _actionCollection.Actions.Count;
+
+            var height = (int)Math.Ceiling((double)_actioncount / (double)_itemsperrow);
+
+            if (_itemsperrow < 2)
+                this.textblockHeader.Visibility = Visibility.Hidden;
+
+            this.Height = (height * 120) + 60;
+            this.Width = (_itemsperrow * 120) + 20;
         }
 
         private void ButtonHandler(int id)
         {
-            ButtonAction action = actions[id];
+            ActionModel.Action action = _actionCollection.Actions[id];
             string path = action.Start;
             string cmd = action.Command;
             string file = "";
@@ -126,12 +146,9 @@ namespace MyDashboard
                 file = "start.bat";
             }
             else
-            {
                 file = command;
-            }
 
             RunBat(file, path);
-
             this.WindowState = WindowState.Minimized;
         }
 
@@ -156,5 +173,6 @@ namespace MyDashboard
 
             Process.Start(startInfo);
         }
+
     }
 }

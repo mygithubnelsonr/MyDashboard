@@ -1,0 +1,38 @@
+[
+  "RowItems": 5,
+  {
+    "ID": 0,
+    "Caption": "Jukebox",
+    "Image": "Jukebox3.png",
+    "Start": "C:\\Company\\Apps\\Multimedia\\MyJukebox\\",
+    "Command": "MyJukebox.exe"
+  },
+  {
+    "ID": 1,
+    "Caption": "Editor",
+    "Image": "Edit.png",
+    "Start": "",
+    "Command": "Files\\MyRecordEditor.appref-ms"
+  },
+  {
+    "ID": 2,
+    "Caption": "Importer",
+    "Image": "Import.png",
+    "Start": "",
+    "Command": "Files\\MyMp3Importer.appref-ms"
+  },
+  {
+    "ID": 3,
+    "Caption": "ToDo",
+    "Image": "ToDo6.png",
+    "Start": "C:\\Company\\Apps\\Utilities\\MyToDo\\",
+    "Command": "MyToDo.exe"
+  },
+  {
+    "ID": 4,
+    "Caption": "MyRenamer",
+    "Image": "MyRenamer2.png",
+    "Start": "C:\\Company\\Apps\\Multimedia\\MyMp3Renamer\\",
+    "Command": "MyMp3Renamer.exe"
+  }
+]

@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyDashboard"
         mc:Ignorable="d"
-        Title="Media Dashboard" Height="200" Width="520" WindowStartupLocation="CenterScreen" 
+        Title="Media Dashboard" Width="319" Height="114" WindowStartupLocation="CenterScreen"
             Foreground="AntiqueWhite" WindowStyle="None" MouseLeftButtonDown="Window_Move"
-            Background="{StaticResource WindowBackground}">
+            MouseRightButtonUp="Window_MouseRightButtonUp" Background="{StaticResource WindowBackground}">
     <Window.Resources>
         <Style x:Key="exitButton" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
@@ -70,35 +70,35 @@
     <DockPanel>
         <Grid DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="4"/>
+                <ColumnDefinition Width="34"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="80"/>
-                </Grid.ColumnDefinitions>
-            <Image Grid.Column="0" Source="Dashboard48.ico" Width="28" Height="32" Margin="8 4 6 1" />
-                <TextBlock Grid.Column="1" Text="Media Dashboard" >
-                    <TextBlock.Style>
-                        <Style>
-                            <Setter Property="TextBlock.FontSize" Value="28" />
-                            <Setter Property="TextBlock.FontWeight" Value="Bold"/>
+                <ColumnDefinition Width="34"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" Source="Images/Dashboard48.png" Width="32" Height="32" />
+            <TextBlock Grid.Column="2" x:Name="textblockHeader" Text="Media Dashboard" >
+                <TextBlock.Style>
+                    <Style>
+                        <Setter Property="TextBlock.FontSize" Value="20" />
+                        <Setter Property="TextBlock.FontWeight" Value="Bold"/>
                         <Setter Property="TextBlock.Foreground" Value="AntiqueWhite"/>
-                            <Setter Property="TextBlock.HorizontalAlignment" Value="Center"/>
-                            <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
-                        </Style>
-                    </TextBlock.Style>
-                </TextBlock>
-            <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Setter Property="TextBlock.HorizontalAlignment" Value="Center"/>
+                        <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <StackPanel Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Right" Visibility="Hidden">
                 <Button x:Name="buttonMinimize" Style="{StaticResource exitButton}"
                         HorizontalAlignment="Left" Click="buttonMinimize_Click">
-                        <Button.Content>
-                            <Rectangle Width="18" Height="5" Fill="White"/>
-                        </Button.Content>
-                    </Button>
-                    <Button x:Name="buttonExit" Content="X" Margin="4" Style="{StaticResource exitButton}"
+                    <Button.Content>
+                        <Rectangle Width="18" Height="5" Fill="White"/>
+                    </Button.Content>
+                </Button>
+                <Button x:Name="buttonExit" Content="X" Margin="4" Style="{StaticResource exitButton}"
                         HorizontalAlignment="Right"
                         Click="buttonExit_Click"/>
-                </StackPanel>
-            </Grid>
-        <WrapPanel x:Name="wrappanel" Orientation="Horizontal" Margin="10">
-        </WrapPanel>
+            </StackPanel>
+        </Grid>
+        <WrapPanel x:Name="wrappanel" Orientation="Horizontal" />
     </DockPanel>
 </Window>
